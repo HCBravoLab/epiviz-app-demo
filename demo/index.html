@@ -5,19 +5,19 @@
     <title>epiviz-charts</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../epiviz-charts/epiviz-scatter-plot.html">
-    <link rel="import" href="../../epiviz-charts/epiviz-genes-track.html">
-    <link rel="import" href="../../epiviz-charts/epiviz-line-track.html">
-    <link rel="import" href="../../epiviz-charts/epiviz-blocks-track.html">
-    <link rel="import" href="../../epiviz-charts/epiviz-heatmap-plot.html">
-    <link rel="import" href="../../epiviz-charts/epiviz-line-plot.html">
-    <link rel="import" href="../../epiviz-charts/epiviz-stacked-line-plot.html">
-    <link rel="import" href="../../epiviz-charts/epiviz-stacked-line-track.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-scatter-plot.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-genes-track.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-line-track.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-blocks-track.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-heatmap-plot.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-line-plot.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-stacked-line-plot.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-stacked-line-track.html">
 
-    <link rel="import" href="../../epiviz-data-source/epiviz-data-source.html">
-    <link rel="import" href="../../epiviz-environment/epiviz-environment.html">
+    <link rel="import" href="../bower_components/epiviz-data-source/epiviz-data-source.html">
+    <link rel="import" href="../bower_components/epiviz-environment/epiviz-environment.html">
 </head>
 
 <body>
@@ -95,17 +95,17 @@
                     "metadata": ["gene", "entrez", "exon_starts", "exon_ends"]
                         }
                 }'>
-        <epiviz-genes-track dim-s='["genes"]'></epiviz-genes-track>
-        <epiviz-line-track dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-line-track>
-        <epiviz-scatter-plot dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-scatter-plot>
-        <epiviz-scatter-plot dim-s='["affy4", "affy3"]' dim-x="affy1" dim-y="affy2"></epiviz-scatter-plot>
-        <epiviz-blocks-track dim-s='["affy1", "affy3"]' dim-x="affy1" dim-y="affy2"></epiviz-blocks-track>
-        <epiviz-stacked-line-plot dim-s='["affy2", "affy3"]' dim-x="affy1" dim-y="affy2"></epiviz-stacked-line-plot>
-        <epiviz-stacked-line-track dim-s='["affy3", "affy1"]' dim-x="affy1" dim-y="affy2"></epiviz-stacked-line-track>
-        <epiviz-heatmap-plot dim-s='["affy3", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-heatmap-plot>
+        <epiviz-genes-track class="charts" dim-s='["genes"]'></epiviz-genes-track>
+        <epiviz-line-track class="charts" dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-line-track>
+        <epiviz-scatter-plot class="charts" dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-scatter-plot>
+        <epiviz-scatter-plot class="charts" dim-s='["affy4", "affy3"]' dim-x="affy1" dim-y="affy2"></epiviz-scatter-plot>
+        <epiviz-blocks-track class="charts" dim-s='["affy1", "affy3"]' dim-x="affy1" dim-y="affy2"></epiviz-blocks-track>
+        <epiviz-stacked-line-plot class="charts" dim-s='["affy2", "affy3"]' dim-x="affy1" dim-y="affy2"></epiviz-stacked-line-plot>
+        <epiviz-stacked-line-track class="charts" dim-s='["affy3", "affy1"]' dim-x="affy1" dim-y="affy2"></epiviz-stacked-line-track>
+        <!--<epiviz-heatmap-plot dim-s='["affy3", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-heatmap-plot>-->
     </epiviz-environment>
 
-    <!--<epiviz-environment measurements='{"affy1":{
+    <epiviz-environment measurements='{"affy1":{
                     "id":"cancer",
                     "name":"Expression Colon Cancer",
                     "type":"feature",
@@ -176,12 +176,12 @@
                     "metadata": ["gene", "entrez", "exon_starts", "exon_ends"]
                         }
                 }'>
-        <epiviz-line-track dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-line-track>
-        <epiviz-genes-track dim-s='["genes"]'></epiviz-genes-track>
-        <epiviz-scatter-plot dim-s='["affy4", "affy3"]' dim-x="affy1" dim-y="affy2"></epiviz-scatter-plot>
-        <epiviz-scatter-plot dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-scatter-plot>
+        <epiviz-line-track class="charts" dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-line-track>
+        <epiviz-genes-track class="charts" dim-s='["genes"]'></epiviz-genes-track>
+        <epiviz-scatter-plot class="charts" dim-s='["affy4", "affy3"]' dim-x="affy1" dim-y="affy2"></epiviz-scatter-plot>
+        <epiviz-scatter-plot class="charts" dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-scatter-plot>
 
-    </epiviz-environment>-->
+    </epiviz-environment>
 </body>
 
 </html>

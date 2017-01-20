@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer#^1.6.1",
+    "polymer": "polymer#^1.7.1",
     "epiviz-data-source": "jkanche/epiviz-data-source",
     "epiviz-environment": "jkanche/epiviz-environment",
     "epiviz-charts": "jkanche/epiviz-chart-to-polymer",
