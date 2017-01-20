@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>epiviz-charts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-scatter-plot.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-genes-track.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-line-track.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-blocks-track.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-heatmap-plot.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-line-plot.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-stacked-line-plot.html">
+    <link rel="import" href="../bower_components/epiviz-charts/epiviz-stacked-line-track.html">
+
+    <link rel="import" href="../bower_components/epiviz-data-source/epiviz-data-source.html">
+    <link rel="import" href="../bower_components/epiviz-environment/epiviz-environment.html">
+</head>
+
+<body>
+    <h3>Environment and charts</h3>
+    <epiviz-data-source provider-type="epiviz.data.WebServerDataProvider" provider-id="umd" provider-url="http://epiviz.cbcb.umd.edu/data/main.php">
+    </epiviz-data-source>
+    <epiviz-environment 
+        transform-data="false"
+        measurements='{"affy1":{
+                    "id":"cancer",
+                    "name":"Expression Colon Cancer",
+                    "type":"feature",
+                    "datasourceId":"gene_expression",
+                    "datasourceGroup":"affymetrix_probeset",
+                    "dataprovider":"umd",
+                    "formula":null,
+                    "defaultChartType":null,
+                    "annotation":null,
+                    "minValue":-3,
+                    "maxValue":20,
+                    "metadata":["probe"]
+                },
+                "affy2":{
+                    "id":"normal",
+                    "name":"Expression Colon Normal",
+                    "type":"feature",
+                    "datasourceId":"gene_expression",
+                    "datasourceGroup":"affymetrix_probeset",
+                    "dataprovider":"umd",
+                    "formula":null,
+                    "defaultChartType":null,
+                    "annotation":null,
+                    "minValue":-3,
+                    "maxValue":20,
+                    "metadata":["probe"]
+                },
+                "affy3":{
+                    "id":"cancer",
+                    "name":"Methylation Colon Cancer",
+                    "type":"feature",
+                    "datasourceId":"gene_methylation",
+                    "datasourceGroup":"affymetrix_probeset",
+                    "dataprovider":"umd",
+                    "formula":null,
+                    "defaultChartType":null,
+                    "annotation":null,
+                    "minValue":0,
+                    "maxValue":1,
+                    "metadata":["probe"]
+                },
+                "affy4":{
+                    "id":"normal",
+                    "name":"Methylation Colon Normal",
+                    "type":"feature",
+                    "datasourceId":"gene_methylation",
+                    "datasourceGroup":"affymetrix_probeset",
+                    "dataprovider":"umd",
+                    "formula":null,
+                    "defaultChartType":null,
+                    "annotation":null,
+                    "minValue":0,
+                    "maxValue":1,
+                    "metadata":["probe"]
+                },
+                "genes":{
+                    "id": "genes",
+                    "name": "Genes",
+                    "type": "range",
+                    "datasourceId": "genes",
+                    "datasourceGroup": "genes",
+                    "dataprovider": "umd",
+                    "formula": null,
+                    "defaultChartType": "Genes Track",
+                    "annotation": null,
+                    "minValue": null,
+                    "maxValue": null,
+                    "metadata": ["gene", "entrez", "exon_starts", "exon_ends"]
+                        }
+                }'>
+        <epiviz-genes-track dim-s='["genes"]'></epiviz-genes-track>
+                <epiviz-line-track dim-s='["affy1", "affy2"]' dim-x="affy1" dim-y="affy2"></epiviz-line-track>
+
+    </epiviz-environment>
+</body>
+
+</html>
